@@ -12,6 +12,7 @@ import {HttpModule} from "@angular/http";
 import {InMemoryWebApiModule} from "angular-in-memory-web-api";
 import {InMemoryDataService} from "./in-memory-data.service";
 import {HighlightDirective} from "./attribute-directives/highlight.directive";
+import {HeroSearchComponent} from "./hero-search.component";
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import {HighlightDirective} from "./attribute-directives/highlight.directive";
     HeroesComponent,
     HeroDetailComponent,
     DashboardComponent,
+    HeroSearchComponent,
     HighlightDirective
   ],
   providers: [
