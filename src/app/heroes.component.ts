@@ -13,6 +13,8 @@ export class HeroesComponent implements OnInit {
   heroes: Hero[];
   selectedHero: Hero;
 
+  color: string;
+
   constructor(private heroService: HeroService,
               private router: Router) {
   }

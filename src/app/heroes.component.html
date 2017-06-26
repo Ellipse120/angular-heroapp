@@ -1,7 +1,7 @@
 <div>
   <h2>My Heros</h2>
   <div>
-    <label>Hero name: </label><input #heroName />
+    <label>Hero name: </label><input #heroName/>
     <button (click)="add(heroName.value); heroName.value=''">
       Add hero
     </button>
@@ -21,5 +21,13 @@
     </h2>
     <button (click)="gotoDetail()">click detail</button>
   </div>
-  <h1 myHighlight>test directive</h1>
+
+  <h1 [myHighlight]="color">red directive</h1>
+  <div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+  </div>
+  <p [myHighlight]="color" defaultColor="violet">Highlight me</p>
+
 </div>
