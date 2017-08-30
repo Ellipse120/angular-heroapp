@@ -32,10 +32,12 @@ export class NgZoneDemo {
     this.label = 'outside';
     this.progress = 0;
     this._ngZone.runOutsideAngular(() => {
-      // reenter the angular zone and display done
-      this._ngZone.run(() => {
-        console.log('Outside Done!');
-      });
+      this._increaseProgress(() => {
+        // reenter the angular zone and display done
+        this._ngZone.run(() => {
+          console.log('Outside Done!');
+        });
+      })
     });
   }
 
