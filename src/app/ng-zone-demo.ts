@@ -36,6 +36,7 @@ export class NgZoneDemo {
         // reenter the angular zone and display done
         this._ngZone.run(() => {
           console.log('Outside Done!');
+          console.log(this._ngZone.isStable);
         });
       })
     });
