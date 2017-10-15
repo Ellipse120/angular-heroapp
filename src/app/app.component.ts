@@ -10,6 +10,8 @@ import {Component} from '@angular/core';
     <nav>
       <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
       <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/chatApp" routerLinkActive="active">ChatRx</a>
+      <a routerLink="/dynamicLoadComponent" routerLinkActive="active">AdDynamicLoad</a>
     </nav>
     <router-outlet></router-outlet>
   `,

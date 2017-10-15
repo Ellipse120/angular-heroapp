@@ -14,6 +14,18 @@ import {InMemoryDataService} from "./in-memory-data.service";
 import {HighlightDirective} from "./attribute-directives/highlight.directive";
 import {HeroSearchComponent} from "./hero-search.component";
 import { NgZoneDemo } from './ng-zone-demo';
+import { ChatAppComponent } from './chat/chat-app.component';
+import { ChatNavComponent } from './chat/components/chatNavComponent';
+import { ChatThreadsComponent } from './chat/components/chatThreadsComponent';
+import { ChatWindowComponent } from './chat/components/chatWindowComponent';
+import { UserService } from './chat/services/userService';
+import { MessageService } from './chat/services/messageService';
+import { AdBannerComponent } from './ad-banner.component';
+import { DynamicLoadComponent } from './dynamicLoad.component';
+import { AdService } from './ad.service';
+import { AdDirective } from './ad.directive';
+import { HeroJobAdComponent } from './hero-job-ad.component';
+import { HeroProfileComponent } from './hero-profile.component';
 
 
 @NgModule({
@@ -31,11 +43,24 @@ import { NgZoneDemo } from './ng-zone-demo';
     DashboardComponent,
     HeroSearchComponent,
     HighlightDirective,
-    NgZoneDemo
+    NgZoneDemo,
+    ChatAppComponent,
+    ChatNavComponent,
+    ChatThreadsComponent,
+    ChatWindowComponent,
+    AdBannerComponent,
+    DynamicLoadComponent,
+    HeroProfileComponent,
+    HeroJobAdComponent,
+    AdDirective
   ],
   providers: [
-    HeroService
+    HeroService,
+    UserService,
+    MessageService,
+    AdService
   ],
+  entryComponents: [ HeroJobAdComponent, HeroProfileComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
